@@ -4,8 +4,15 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Link } from "lucide-react"
+import {useForm } from "react-hook-form"
 
 export function AuthForm() {
+  const form = useForm()
+  const handleSubmit = form.handleSubmit((data) => {
+    console.log(data)
+  })
+
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-black via-gray-900 to-red-800">
       <div className="p-6 bg-black rounded-lg shadow-lg border-2 border-red-600 max-w-md w-full">
@@ -15,7 +22,7 @@ export function AuthForm() {
             Entre para fazer parte Equipe!
           </p>
         </div>
-        <form className="space-y-6 mt-4">
+        <form onSubmit={handleSubmit} className="space-y-6 mt-4">
           <div className="space-y-2">
             <Label htmlFor="email" className="text-red-400">
               Email
@@ -25,17 +32,7 @@ export function AuthForm() {
               type="email"
               placeholder="Digite seu email"
               className="pl-4 bg-gray-800 text-gray-100 border-red-600 focus:ring-red-500"
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="password" className="text-red-400">
-              Senha
-            </Label>
-            <Input
-              id="password"
-              type="password"
-              placeholder="Digite sua senha"
-              className="pl-4 bg-gray-800 text-gray-100 border-red-600 focus:ring-red-500"
+              {...form.register('email')}
             />
           </div>
           <Button
