@@ -1,15 +1,17 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { useForm } from "react-hook-form"
+import { signIn } from "next-auth/react"
 
 export function AuthForm() {
-  const form = useForm();
-  const handleSubmit = form.handleSubmit((data) => {
-    console.log(data);
-  });
+  const form = useForm()
+  const handleSubmit = form.handleSubmit(async (data) => {
+    console.log(data)
+    await signIn('email', { email: data.email })
+  })
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-black via-gray-900 to-red-800">
@@ -44,5 +46,5 @@ export function AuthForm() {
         </form>
       </div>
     </div>
-  );
+  )
 }
