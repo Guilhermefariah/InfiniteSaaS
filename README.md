@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InfiteSaaS 🌀
 
-## Getting Started
+InfiteSaaS é um projeto de autenticação criado com Next.js e Tailwind CSS. O projeto utiliza a biblioteca `next-auth` para gerenciar a autenticação e a biblioteca `tailwindcss` para estilizar a interface do usuário.
 
-First, run the development server:
+## Iniciando o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Para iniciar o projeto, execute o comando `npm run dev` ou `yarn dev` no terminal. Isso irá iniciar o servidor de desenvolvimento e você poderá acessar a aplicação em `http://localhost:3000`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Autenticação com `next-auth`
+* Estilização com `tailwindcss`
+* Página de login com formulário de autenticação
+* Página de cadastro com formulário de cadastro
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tecnologias Utilizadas
 
-## Learn More
+* Next.js
+* Tailwind CSS
+* next-auth
+* React
 
-To learn more about Next.js, take a look at the following resources:
+## Estrutura do Projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* `src/app`: Pasta principal do projeto, contém os componentes e páginas da aplicação.
+* `src/components`: Pasta que contém os componentes reutilizáveis da aplicação.
+* `src/lib`: Pasta que contém as funções e utilitários da aplicação.
+* `tailwind.config.ts`: Arquivo de configuração do Tailwind CSS.
+* `next.config.mjs`: Arquivo de configuração do Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contribuição
 
-## Deploy on Vercel
+Se você deseja contribuir com o projeto, por favor, faça um fork do repositório e envie um pull request com suas alterações.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Licença
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto é licenciado sob a licença MIT. Veja o arquivo `LICENSE` para mais informações.
